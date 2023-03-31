@@ -1,0 +1,38 @@
+{
+    "name": "globalart/yii2-swagger",
+    "description": "Swagger Documentation Generator for Yii2 Framework",
+    "type": "yii2-extension",
+    "keywords": [
+        "yii2",
+        "yii2 swagger",
+        "yii2 api documentation generator"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "GlobalArt, Inc",
+            "email": "admin@globalart.dev"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "yiisoft/yii2": "~2.0.12",
+        "zircote/swagger-php": "^2.0",
+        "bower-asset/swagger-ui": "^3.1"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "~2.0",
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "globalart\\swagger\\": ""
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}
