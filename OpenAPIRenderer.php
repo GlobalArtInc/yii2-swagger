@@ -75,14 +75,14 @@ class OpenAPIRenderer extends Action
      *
      * @return Swagger
      */
-    protected function getSwaggerDocumentation(): Swagger
+    protected function getSwaggerDocumentation()
     {
         if (!$this->cache instanceof Cache) {
-            return \Swagger\scan($this->scanDir, $this->scanOptions);
+            return \OpenApi\Generator::scan($this->scanDir, $this->scanOptions);
         }
 
         return $this->cache->getOrSet($this->cacheKey, function () {
-            return \Swagger\scan($this->scanDir, $this->scanOptions);
+            return \OpenApi\Generator::scan($this->scanDir, $this->scanOptions);
         }, $this->cacheDuration);
     }
 

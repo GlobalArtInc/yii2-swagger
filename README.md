@@ -45,11 +45,11 @@ use yii\helpers\Url;
 use yii\web\Controller;
 
 /**
- * @SWG\Swagger(
+ * @OA\Swagger(
  *     basePath="/",
  *     produces={"application/json"},
  *     consumes={"application/x-www-form-urlencoded"},
- *     @SWG\Info(version="1.0", title="Simple API"),
+ *     @OA\Info(version="1.0", title="Simple API"),
  * )
  */
 class SiteController extends Controller
@@ -102,13 +102,13 @@ use yii\rest\Controller;
 class UserController extends Controller
 {
     /**
-     * @SWG\Get(path="/user",
+     * @OA\Get(path="/user",
      *     tags={"User"},
      *     summary="Retrieves the collection of User resources.",
-     *     @SWG\Response(
+     *     @OA\Response(
      *         response = 200,
      *         description = "User collection response",
-     *         @SWG\Schema(ref = "#/definitions/User")
+     *         @OA\Schema(ref = "#/definitions/User")
      *     ),
      * )
      */
@@ -133,11 +133,11 @@ You need to create folder `app/models/definitions` and add `User` definition cla
 namespace app\models\definitions;
 
 /**
- * @SWG\Definition(required={"username", "email"})
+ * @OA\Definition(required={"username", "email"})
  *
- * @SWG\Property(property="id", type="integer")
- * @SWG\Property(property="email", type="string")
- * @SWG\Property(property="username", type="string")
+ * @OA\Property(property="id", type="integer")
+ * @OA\Property(property="email", type="string")
+ * @OA\Property(property="username", type="string")
  */
 class User
 {
