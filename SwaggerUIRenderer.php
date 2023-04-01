@@ -14,7 +14,9 @@ class SwaggerUIRenderer extends Action
     /**
      * @var string the rest urls configuration
      */
-    public $urls;
+    public $urls = [
+        'api' => 'json-schema'
+    ];
 
     /**
      * @var boolean is filter show
@@ -50,7 +52,7 @@ class SwaggerUIRenderer extends Action
         }
 
         return $this->controller->render($this->view, [
-            'urls' => $urls,
+            'urls' => json_encode($urls) ?? [],
             'filter' => $this->filter,
         ]);
     }

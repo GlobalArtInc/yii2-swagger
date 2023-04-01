@@ -78,7 +78,7 @@ SwaggerAsset::register($this);
     window.onload = function () {
         // Build a system
         const ui = SwaggerUIBundle({
-            urls: <?= json_encode($urls); ?>,
+            urls: <?= $urls ?>,
             dom_id: '#swagger-ui',
             deepLinking: true,
             jsonEditor: true,
